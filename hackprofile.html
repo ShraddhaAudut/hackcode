@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HerConnect - Profile</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pdYbW6WZlMZn1lN+2M45y5neW0HkpWdu0isEu4O5W6IuP9bIQ8CwIpPqHJ1B93E5H7C40DgJfQuZzFum9tQvOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="profilehack.css" />
+  </head>
+  <body>
+    <!-- Profile Header -->
+    <header class="profile-header">
+      <div class="profile-info">
+        <img
+          src="profile-placeholder.png"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <div class="profile-details">
+          <h1>Jane Doe</h1>
+          <p class="bio">Tech Enthusiast | Mentor | Researcher</p>
+          <button class="edit-profile-btn">
+            <i class="fas fa-edit"></i> Edit Profile
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Options -->
+    <section class="profile-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mentorship">Mentorship</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="stories">Stories</button>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-content">
+      <!-- Example content items (each has a data-category attribute) -->
+      <div class="content-item mentorship" data-category="mentorship">
+        <h3>Mentorship Post Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+          volutpat massa.
+        </p>
+      </div>
+      <div class="content-item research" data-category="research">
+        <h3>Research Collaboration</h3>
+        <p>
+          Details on a research project collaboration opportunity. Connect to
+          learn more.
+        </p>
+      </div>
+      <div class="content-item stories" data-category="stories">
+        <h3>Story of the Day</h3>
+        <p>
+          Sharing my journey of overcoming challenges in the tech industry.
+        </p>
+      </div>
+      <div class="content-item mentorship" data-category="mentorship">
+        <h3>Mentorship Experience</h3>
+        <p>
+          Reflecting on a recent mentorship session that made a difference in my
+          career.
+        </p>
+      </div>
+      <!-- Additional content items can be added here -->
+    </section>
+
+    <!-- Optional: JavaScript for filtering functionality -->
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const contentItems = document.querySelectorAll(".content-item");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach((button) =>
+            button.classList.remove("active")
+          );
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          contentItems.forEach((item) => {
+            if (filter === "all" || item.getAttribute("data-category") === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

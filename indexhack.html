@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HerConnect Home</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pdYbW6WZlMZn1lN+2M45y5neW0HkpWdu0isEu4O5W6IuP9bIQ8CwIpPqHJ1B93E5H7C40DgJfQuZzFum9tQvOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="hackstyles.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="top-nav">
+      <div class="logo">
+        <h1>HerConnect</h1>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="top-menu">
+        <a href="indexhack.html" class="nav-item active">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="mentorship.html" class="nav-item">
+          <i class="fas fa-user-tie"></i>
+          <span>Mentorship</span>
+        </a>
+        <a href="research.html" class="nav-item">
+          <i class="fas fa-flask"></i>
+          <span>Research</span>
+        </a>
+        <a href="community.html" class="nav-item">
+          <i class="fas fa-users"></i>
+          <span>Community</span>
+        </a>
+      </nav>
+
+      <!-- Top Icons & Profile Tab -->
+      <div class="top-icons">
+        <button class="icon-btn" id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn" id="menu-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <!-- Profile Tab -->
+        <a href="hackprofile.html" class="profile-tab">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h2>Welcome, [User Name]!</h2>
+        <p>
+          Discover your daily inspiration and explore mentorship opportunities.
+        </p>
+        <button class="cta-btn">Question/Story of the Day</button>
+      </section>
+
+      <!-- Mentorship & Career Guidance Section -->
+      <section class="mentorship-section">
+        <h3>Mentorship & Career Guidance</h3>
+        <p>
+          Our AI-powered matching pairs you with industry professionals based on your career goals, skills, and interests.
+        </p>
+        <div class="mentorship-cards">
+          <div class="card">
+            <i class="fas fa-user-tie"></i>
+            <h4>Find a Mentor</h4>
+            <p>Get matched with experts who can guide your career journey.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h4>Live AMA Sessions</h4>
+            <p>Join live Q&A sessions with industry leaders.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-book-open"></i>
+            <h4>Growth Resources</h4>
+            <p>Access webinars, articles, and courses tailored for you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Collaboration Section -->
+      <section class="research-section">
+        <h3>Research Collaboration</h3>
+        <p>
+          Share your research ideas, collaborate on projects, and visualize potential collaborations through our dynamic research map.
+        </p>
+        <div class="research-actions">
+          <button class="cta-btn">Submit Research Idea</button>
+          <button class="cta-btn secondary">View Interactive Map</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
