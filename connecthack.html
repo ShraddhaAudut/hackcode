@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BranchOut - Connect</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pdYbW6WZlMZn1lN+2M45y5neW0HkpWdu0isEu4O5W6IuP9bIQ8CwIpPqHJ1B93E5H7C40DgJfQuZzFum9tQvOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="connecthack.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="indexhack.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <!-- Daily Topic Section -->
+    <section class="daily-topic">
+      <h2>Question/Topic of the Day</h2>
+      <p class="topic-question">
+        What is one challenge you've overcome recently, and how did it shape you?
+      </p>
+    </section>
+
+    <!-- Share Your Story Section -->
+    <section class="share-story">
+      <h3>Share Your Story</h3>
+      <form class="story-form">
+        <textarea
+          name="story"
+          id="story"
+          placeholder="Write your story here..."
+          rows="4"
+        ></textarea>
+        <button type="submit" class="submit-story-btn">
+          <i class="fas fa-paper-plane"></i> Submit Story
+        </button>
+      </form>
+    </section>
+
+    <!-- Sample Stories Section -->
+    <section class="sample-stories">
+      <h3>Stories from the Community</h3>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Alice</span>
+          <span class="story-date">Mar 1, 2023</span>
+        </div>
+        <p class="story-content">
+          I overcame my fear of public speaking by volunteering at a local event, which changed my life.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Beth</span>
+          <span class="story-date">Mar 2, 2023</span>
+        </div>
+        <p class="story-content">
+          After a difficult period at work, I learned to trust my instincts and pivot to a more fulfilling role.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Carla</span>
+          <span class="story-date">Mar 2, 2023</span>
+        </div>
+        <p class="story-content">
+          Facing rejection helped me build resilience and eventually land my dream project.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Dana</span>
+          <span class="story-date">Mar 3, 2023</span>
+        </div>
+        <p class="story-content">
+          I turned a personal setback into an opportunity by starting my own side project.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Evelyn</span>
+          <span class="story-date">Mar 3, 2023</span>
+        </div>
+        <p class="story-content">
+          Learning to ask for help was the best decision I ever made during a stressful period at work.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Fiona</span>
+          <span class="story-date">Mar 4, 2023</span>
+        </div>
+        <p class="story-content">
+          A challenging project forced me to learn new skills that have now become my strengths.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Grace</span>
+          <span class="story-date">Mar 4, 2023</span>
+        </div>
+        <p class="story-content">
+          I found inspiration in unexpected places, which transformed my approach to problem solving.
+        </p>
+      </div>
+      <div class="story">
+        <div class="story-header">
+          <span class="story-author">Hannah</span>
+          <span class="story-date">Mar 5, 2023</span>
+        </div>
+        <p class="story-content">
+          Overcoming my self-doubt allowed me to lead my team to success during a crucial project.
+        </p>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script>
+      // (Optional: Add interactivity to the story form or dynamically load new topics/stories)
+      const storyForm = document.querySelector('.story-form');
+      storyForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Your story has been submitted!');
+        storyForm.reset();
+      });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-/* Reset and basic styling */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #efe8de; /* Nude background */
+    color: #3d4c2d; /* Dark green text */
     line-height: 1.6;
   }
   
@@ -17,67 +17,64 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   
-  /* Logo */
   .logo h1 {
-    font-size: 24px;
-    color: #333;
+    font-size: 26px;
+    color: #3d4c2d;
   }
   
-  /* Navigation Menu */
   .top-menu {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
   }
   
   .top-menu .nav-item {
     text-decoration: none;
-    color: #666;
+    color: #3d4c2d;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 12px;
+    font-size: 15px;
     transition: color 0.3s ease;
   }
   
   .top-menu .nav-item i {
-    font-size: 20px;
-    margin-bottom: 3px;
+    font-size: 22px;
+    margin-bottom: 5px;
   }
   
   .top-menu .nav-item.active,
   .top-menu .nav-item:hover {
-    color: #ff4081;
+    color: #3d4c2d;
   }
   
-  /* Top Icons Container */
   .top-icons {
     display: flex;
     align-items: center;
     gap: 15px;
   }
   
-  /* Icon Button Styling */
   .icon-btn {
     background: none;
     border: none;
-    font-size: 20px;
-    color: #333;
+    font-size: 22px;
+    color: #3d4c2d;
     cursor: pointer;
   }
   
-  /* Profile Tab Styling */
   .profile-tab {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    color: #333;
+    color: #3d4c2d;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -85,135 +82,89 @@
   }
   
   .profile-tab i {
-    font-size: 20px;
+    font-size: 22px;
   }
-  
   
   .profile-tab:hover {
-    background-color: #ff4081;
+    background-color: #3d4c2d;
     color: #fff;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 20px;
   }
   
   /* Hero Section */
   .hero-section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
-    margin-bottom: 40px;
   }
   
-  .hero-section h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  .hero-section p {
-    font-size: 18px;
+  .hero-content h2 {
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #555;
+    color: #3d4c2d;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #3d4c2d;
   }
   
   .cta-btn {
-    padding: 12px 25px;
-    background-color: #ff4081;
+    padding: 14px 30px;
+    background-color: #3d4c2d;
     color: #fff;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .cta-btn:hover {
-    background-color: #e73370;
+    background-color: #2e3a23;
   }
   
-  .cta-btn.secondary {
-    background-color: #0077cc;
-  }
-  
-  .cta-btn.secondary:hover {
-    background-color: #005fa3;
-  }
-  
-  /* Mentorship Section */
-  .mentorship-section {
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .mentorship-section h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .mentorship-section p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  .mentorship-cards {
+  /* Quick Access Section */
+  .quick-access {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
   }
   
-  .mentorship-cards .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .feature-card {
+    background-color: #efe8de;
+    border: 1px solid #3d4c2d;
+    border-radius: 12px;
     padding: 20px;
-    width: 250px;
     text-align: center;
+    width: 280px;
     transition: transform 0.3s ease;
   }
   
-  .mentorship-cards .card:hover {
+  .feature-card:hover {
     transform: translateY(-5px);
   }
   
-  .mentorship-cards .card i {
-    font-size: 30px;
-    color: #ff4081;
+  .feature-card i {
+    font-size: 36px;
+    color: #3d4c2d;
     margin-bottom: 10px;
   }
   
-  .mentorship-cards .card h4 {
-    font-size: 20px;
+  .feature-card h4 {
+    font-size: 22px;
     margin-bottom: 10px;
+    color: #3d4c2d;
   }
   
-  .mentorship-cards .card p {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  /* Research Section */
-  .research-section {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .research-section h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .research-section p {
+  .feature-card p {
     font-size: 16px;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  .research-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    color: #3d4c2d;
   }
   

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HerConnect - Research Submission</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pdYbW6WZlMZn1lN+2M45y5neW0HkpWdu0isEu4O5W6IuP9bIQ8CwIpPqHJ1B93E5H7C40DgJfQuZzFum9tQvOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="researchhack.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="indexhack.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+
+    <div class="research-container">
+      <header class="research-header">
+        <h1>Research Submission</h1>
+        <p>Share your research interests and ideas with our community!</p>
+      </header>
+      <form id="researchForm">
+        <!-- Section 1: Keywords -->
+        <div class="form-section">
+          <label for="keywords">Enter Keywords (minimum 5 words separated with comma):</label>
+          <input
+            type="text"
+            id="keywords"
+            name="keywords"
+            placeholder="e.g. machine learning, AI, data analytics, neural networks, predictive modeling"
+            required
+          />
+        </div>
+        <!-- Section 2: Detailed Description -->
+        <div class="form-section">
+          <label for="description">Describe Your Research Interest in Detail (minimum 3 sentences):</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="6"
+            placeholder="Describe your research in detail..."
+            required
+          ></textarea>
+        </div>
+        <!-- Section 3: Additional Information -->
+        <div class="form-section">
+          <label for="additional">Additional Information (Optional):</label>
+          <textarea
+            id="additional"
+            name="additional"
+            rows="4"
+            placeholder="Any additional context or what do you hope to achieve with this research?"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i> Submit Research Idea
+        </button>
+      </form>
+    </div>
+
+    <script>
+      // Basic form validation before submission
+      document.getElementById("researchForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const keywords = document.getElementById("keywords").value.trim();
+        const description = document.getElementById("description").value.trim();
+
+        // Check for minimum 5 words in keywords
+        if (keywords.split(/\s+/).length < 5) {
+          alert("Please enter at least 5 words in the keywords field.");
+          return;
+        }
+
+        // Check for minimum 3 sentences in description (counting periods)
+        if ((description.match(/\./g) || []).length < 3) {
+          alert("Please enter at least 3 sentences in the detailed description.");
+          return;
+        }
+
+        alert("Research idea submitted successfully!");
+        // Replace the alert with your submission logic if needed.
+        this.reset();
+      });
+    </script>
+  </body>
+</html>

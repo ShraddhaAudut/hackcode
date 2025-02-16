@@ -15,73 +15,122 @@
     <link rel="stylesheet" href="profilehack.css" />
   </head>
   <body>
+    <!-- Back Button -->
+    <a href="indexhack.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
     <!-- Profile Header -->
     <header class="profile-header">
       <div class="profile-info">
-        <img
-          src="profile-placeholder.png"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
+        <img src="profile-placeholder.png" alt="" class="profile-pic" />
         <div class="profile-details">
-          <h1>Jane Doe</h1>
-          <p class="bio">Tech Enthusiast | Mentor | Researcher</p>
+          <div class="name-role">
+            <h1>
+              Jane Doe 
+              <i class="fas fa-user-circle dummy-icon"></i>
+            </h1>
+            <div class="sub-info">
+              <span class="pronouns">she/her</span>
+              <span class="current-role">Software Engineer</span>
+            </div>
+          </div>
+          <div class="upload-photo">
+            <a href="#" class="upload-link">
+              <i class="fas fa-camera"></i> Upload Photo
+            </a>
+          </div>
           <button class="edit-profile-btn">
             <i class="fas fa-edit"></i> Edit Profile
           </button>
         </div>
+      </div>
+      <!-- Toggle Button for Additional Details -->
+      <button class="toggle-details">Show More Details</button>
+      <div class="additional-details">
+        <p><strong>Age:</strong> 29</p>
+        <p><strong>Gender:</strong> Female</p>
+        <p><strong>Sex:</strong> Female</p>
+        <p><strong>Ethnicity:</strong> Caucasian</p>
       </div>
     </header>
 
     <!-- Filter Options -->
     <section class="profile-filters">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="mentorship">Mentorship</button>
       <button class="filter-btn" data-filter="research">Research</button>
       <button class="filter-btn" data-filter="stories">Stories</button>
     </section>
 
     <!-- Profile Content -->
     <section class="profile-content">
-      <!-- Example content items (each has a data-category attribute) -->
-      <div class="content-item mentorship" data-category="mentorship">
-        <h3>Mentorship Post Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-          volutpat massa.
-        </p>
-      </div>
+      <!-- Research Experience Section -->
       <div class="content-item research" data-category="research">
-        <h3>Research Collaboration</h3>
-        <p>
-          Details on a research project collaboration opportunity. Connect to
-          learn more.
-        </p>
+        <h3>Research Experience</h3>
+        <div class="research-cards">
+          <!-- Research Card 1 -->
+          <div class="research-card">
+            <h4>AI-Powered Code Optimization</h4>
+            <p>
+              Collaborating with a team to develop AI algorithms that optimize code performance and reduce debugging time.
+            </p>
+            <span class="research-dates">Jan 2022 - Present</span>
+          </div>
+          <!-- Research Card 2 -->
+          <div class="research-card">
+            <h4>Machine Learning for Bug Prediction</h4>
+            <p>
+              Leading a project focused on using machine learning to predict and prevent software bugs.
+            </p>
+            <span class="research-dates">Jun 2020 - Dec 2021</span>
+          </div>
+          <!-- Research Card 3 -->
+          <div class="research-card">
+            <h4>Cloud-Based DevOps Solutions</h4>
+            <p>
+              Collaborating on innovative DevOps tools designed for cloud computing environments.
+            </p>
+            <span class="research-dates">Mar 2019 - May 2020</span>
+          </div>
+        </div>
+        <!-- Overall Research Overview -->
+        <div class="research-overview">
+          <p>
+            Jane’s research experience spans AI-driven optimization, predictive bug analytics, and modern DevOps solutions. Her work demonstrates a strong commitment to leveraging technology for practical, innovative solutions.
+          </p>
+        </div>
       </div>
+
+      <!-- Stories Section -->
       <div class="content-item stories" data-category="stories">
-        <h3>Story of the Day</h3>
+        <h3>Stories</h3>
         <p>
-          Sharing my journey of overcoming challenges in the tech industry.
+          Through her insightful narratives, Jane shares her journey—from solving complex bugs to attending influential tech conferences and embracing new technologies. These stories inspire others to pursue excellence and drive positive change in the tech community.
         </p>
       </div>
-      <div class="content-item mentorship" data-category="mentorship">
-        <h3>Mentorship Experience</h3>
-        <p>
-          Reflecting on a recent mentorship session that made a difference in my
-          career.
-        </p>
-      </div>
-      <!-- Additional content items can be added here -->
     </section>
 
-    <!-- Optional: JavaScript for filtering functionality -->
+    <!-- JavaScript for toggling details and filtering -->
     <script>
+      // Toggle Additional Details
+      const toggleBtn = document.querySelector('.toggle-details');
+      const additionalDetails = document.querySelector('.additional-details');
+      toggleBtn.addEventListener('click', () => {
+        if (additionalDetails.style.display === 'block') {
+          additionalDetails.style.display = 'none';
+          toggleBtn.textContent = 'Show More Details';
+        } else {
+          additionalDetails.style.display = 'block';
+          toggleBtn.textContent = 'Hide Details';
+        }
+      });
+
+      // Filtering Functionality
       const filterButtons = document.querySelectorAll(".filter-btn");
       const contentItems = document.querySelectorAll(".content-item");
 
       filterButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
-          // Remove active class from all buttons
           filterButtons.forEach((button) =>
             button.classList.remove("active")
           );

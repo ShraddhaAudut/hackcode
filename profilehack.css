@@ -1,100 +1,227 @@
-/* Reset and base styles */
+/* Reset and Base Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* Profile Header */
-.profile-header {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.profile-details h1 {
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-.profile-details .bio {
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.edit-profile-btn {
-  background-color: #ff4081;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.edit-profile-btn:hover {
-  background-color: #e73370;
-}
-
-/* Filter Options */
-.profile-filters {
-  background-color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.filter-btn {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background-color: #ff4081;
-  color: #fff;
-}
-
-/* Profile Content */
-.profile-content {
-  padding: 20px;
-}
-
-.content-item {
-  background-color: #fff;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.content-item h3 {
-  margin-bottom: 10px;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #efe8de; /* Nude background */
+    color: #3d4c2d;           /* Dark green text */
+    line-height: 1.6;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    display: inline-block;
+    margin: 20px;
+    font-size: 16px;
+    color: #3d4c2d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .back-btn i {
+    margin-right: 8px;
+  }
+  
+  .back-btn:hover {
+    color: #2e3a23;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .name-role {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name-role h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #3d4c2d;
+  }
+  
+  .dummy-icon {
+    color: #888;
+    margin-left: 8px;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  
+  .sub-info {
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    color: #3d4c2d;
+  }
+  
+  .upload-photo {
+    margin: 10px 0;
+  }
+  
+  .upload-link {
+    font-size: 14px;
+    color: #3d4c2d;
+    text-decoration: none;
+  }
+  
+  .upload-link:hover {
+    text-decoration: underline;
+  }
+  
+  .edit-profile-btn {
+    background-color: #3d4c2d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #2e3a23;
+  }
+  
+  /* Toggle Additional Details */
+  .toggle-details {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3d4c2d;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .additional-details {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #efe8de;  /* Using nude as a lighter card background */
+    border-radius: 8px;
+    font-size: 14px;
+    color: #3d4c2d;
+  }
+  
+  .additional-details p {
+    margin-bottom: 8px;
+  }
+  
+  /* Filter Options */
+  .profile-filters {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .filter-btn {
+    background-color: #efe8de;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    color: #3d4c2d;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn.active {
+    background-color: #3d4c2d;
+    color: #fff;
+  }
+  
+  /* Profile Content */
+  .profile-content {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .content-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .content-item h3 {
+    margin-bottom: 15px;
+    color: #3d4c2d;
+  }
+  
+  /* Research Card Styles */
+  .research-cards {
+    margin-top: 15px;
+  }
+  
+  .research-card {
+    background-color: #fff;
+    border: 1px solid #3d4c2d;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .research-card h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #3d4c2d;
+  }
+  
+  .research-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #3d4c2d;
+  }
+  
+  .research-dates {
+    font-size: 13px;
+    color: #3d4c2d;
+  }
+  
+  /* Research Overview Styles */
+  .research-overview {
+    padding: 15px;
+    background-color: #efe8de;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #3d4c2d;
+    margin-top: 20px;
+  }
+  

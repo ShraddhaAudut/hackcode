@@ -1,0 +1,139 @@
+/* Import Google Font (Optional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #efe8de; /* Nude background */
+  color: #3d4c2d;           /* Dark green text */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #3d4c2d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-btn i {
+  margin-right: 8px;
+}
+
+.back-btn:hover {
+  color: #2e3a23;
+}
+
+/* Daily Topic Section (Example if needed) */
+.daily-topic {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.daily-topic h2 {
+  font-size: 26px;
+  color: #3d4c2d;
+  margin-bottom: 10px;
+}
+
+.topic-question {
+  font-size: 20px;
+  color: #3d4c2d;
+}
+
+/* Share Your Story Section (Example) */
+.share-story {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.share-story h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #3d4c2d;
+}
+
+.story-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #3d4c2d;
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.submit-story-btn {
+  background: #3d4c2d;
+  color: #efe8de;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-story-btn:hover {
+  background: #2e3a23;
+}
+
+/* Sample Stories Section (Example) */
+.sample-stories {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sample-stories h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #3d4c2d;
+}
+
+.story {
+  padding: 20px;
+  border-bottom: 1px solid #efe8de;
+  transition: background 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.story:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.story:hover {
+  background: #efe8de;
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #3d4c2d;
+}
+
+.story-content {
+  font-size: 16px;
+  color: #3d4c2d;
+}

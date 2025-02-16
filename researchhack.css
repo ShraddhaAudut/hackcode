@@ -1,0 +1,121 @@
+/* Import Google Font (Optional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #efe8de; /* Nude background */
+  color: #3d4c2d;           /* Dark green text */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Back Button - Fixed at Top Left */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: #3d4c2d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-btn i {
+  margin-right: 5px;
+}
+
+.back-btn:hover {
+  color: #2e3a23;
+}
+
+/* Container */
+.research-container {
+  max-width: 800px;
+  margin: 80px auto 50px; /* Extra top margin to account for fixed back button */
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.research-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.research-header h1 {
+  font-size: 36px;
+  color: #3d4c2d;
+  margin-bottom: 10px;
+}
+
+.research-header p {
+  font-size: 20px;
+  color: #3d4c2d;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #3d4c2d;
+}
+
+.form-section input,
+.form-section textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #3d4c2d;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  color: #3d4c2d;
+  background-color: #efe8de;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  border-color: #3d4c2d;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #3d4c2d;
+  color: #efe8de;
+  border: none;
+  padding: 18px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-btn:hover {
+  background: #2e3a23;
+}
